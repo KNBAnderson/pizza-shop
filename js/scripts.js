@@ -70,12 +70,21 @@ $(function() {
     var toppings = []; $('input:checkbox[name=topping]:checked').each(function(){
       toppings.push($(this).val());
     });
-    var pizza = new Pizza(size, sauce, cheese, toppings);
-    pizza.getPrice();
-    pizzaOrder.addPizza(pizza);
-    $('#cart').append('<p>1 ' + size + ' sized pizza with ' + sauce + ' sauce, ' + cheese + ', and topped with ' + pizza.printToppings() + '</p><p>Price: $' + pizza.price + '</p>');
+    if (size && sauce && cheese) {
+      var pizza = new Pizza(size, sauce, cheese, toppings);
+      pizza.getPrice();
+      pizzaOrder.addPizza(pizza);
+
+      if (toppings = []) {
+        $('#order').append('<p>1 ' + size + ' sized pizza with ' + sauce + ' sauce, and ' + cheese + '</p><p calls="right-align">Price: $' + pizza.price.toFixed(2) + '</p>');
+      } else {
+        $('#order').append('<p>1 ' + size + ' sized pizza with ' + sauce + ' sauce, ' + cheese + ', and topped with ' + pizza.printToppings() + '</p><p calls="right-align">Price: $' + pizza.price.toFixed(2) + '</p>');
+      }
+    } else {
+      alert('Please select a size, sauce, and cheese option to conitue')
+    }
   })
-    var total = pizzaOrder.getTotal();
+    var total = pizzaOrder.getTotal().toFixed(2);
     $('#total').text(total);
     console.log(total);
     //need to show price div and put price into span there
