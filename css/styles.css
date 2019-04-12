@@ -26,3 +26,7 @@ h1 {
   margin: 10px;
   border-radius: 5%;
 }
+
+label {
+  font-weight: bold;
+}
