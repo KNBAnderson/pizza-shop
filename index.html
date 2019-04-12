@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -9,11 +10,12 @@
 </head>
 
 <body class="container">
-  <header>
-    <h1>Bourgeoisie Pizza</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+  <header class='section'>
+    <h1>Gold's Pizza</h1>
+    <p>Home of the word famous gold pizza!</p>
+    <p class="small">*Gold is inedible. You can only use your pizza for decoration if you order it with gold</p>
   </header>
-  <form >
+  <form class='section'>
     <div id="pizza-questions">
       <h3>Put together your perfect pizza!</h3>
       <div class="form-goup" id="size">
@@ -53,15 +55,15 @@
         <input type="checkbox" name="topping" value="broccoli">Broccoli<br>
       </div>
     </div>
-    <button type="submit" name="submit">Add to cart</button>
-    <button type="button" id='complete' name="addToOrder">Complete order</button>
+    <button class='btn btn-danger' type="submit" name="submit">Add to cart</button>
+    <button class='btn btn-danger' type="button" id='complete' name="addToOrder">Complete order</button>
   </form>
 
   <div id="pizza-picture">
 
   </div>
 
-  <div id='order'>
+  <div id='order' class='section'>
 
     <div id="total-div">
       <h5>Your total is $<span id='total'></span>. Expect your delivery in 17 hours!</h5>

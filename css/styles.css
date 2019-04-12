@@ -1,0 +1,28 @@
+body {
+  background-image: url('https://png.pngtree.com/element_our/png_detail/20180912/pizza-slice-seamless-pattern-cute-hand-drawn-png_94588.jpg');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+#total-div, #order {
+  display: none;
+}
+
+.right-align {
+  text-align: right;
+}
+.small {
+  font-size: 40%;
+}
+
+.section {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5%;
+}
