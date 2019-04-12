@@ -16,18 +16,27 @@
   <form >
     <div id="pizza-questions">
       <h3>Put together your perfect pizza!</h3>
+      <div class="form-goup" id="size">
+        <label for="size">What size pizza are you looking for?</label><br>
+        <input type="radio" name="size" value="personal">Personal pizza (best for 1 person)<br>
+        <input type="radio" name="size" value="small">Small pizza (best for 1-2 people)<br>
+        <input type="radio" name="size" value="medium">Medium pizza (best for 2-4 people)<br>
+        <input type="radio" name="size" value="large">Large pizza (best for 4-6 people)<br>
+        <input type="radio" name="size" value="x-large">Extra Large pizza (best for 6-10 people)<br>
+      </div>
+
       <div class="form-goup" id="sauce">
         <label for="sauce">What kind of sauce would you like?</label><br>
         <input type="radio" name="sauce" value="red">Red Sauce<br>
-        <input type="radio" name="sauce" value="green">Pesto Sauce<br>
+        <input type="radio" name="sauce" value="pesto">Pesto Sauce<br>
         <input type="radio" name="sauce" value="white">White Sauce<br>
       </div>
 
       <div class="form-group" id="cheese">
         <label for="cheese">Would you like cheese on your pizza?</label><br>
-        <input type="radio" name="cheese" value="no-cheese">No Cheese<br>
-        <input type="radio" name="cheese" value="yes-cheese">I'd like cheese<br>
-        <input type="radio" name="cheese" value="extra-cheese">I want extra cheese<br>
+        <input type="radio" name="cheese" value="no cheese">No Cheese<br>
+        <input type="radio" name="cheese" value="cheese">I'd like cheese<br>
+        <input type="radio" name="cheese" value="extra cheese">I want extra cheese<br>
       </div>
 
       <div class="form-group" id="toppings">
@@ -44,15 +53,20 @@
         <input type="checkbox" name="topping" value="broccoli">Broccoli<br>
       </div>
     </div>
-    <button type="button" name="addToOrder">Add another pizza</button>
-    <button type="submit" name="submit">Order your custom pizza!</button>
+    <button type="submit" name="submit">Add to cart</button>
+    <button type="button" name="addToOrder">Complete order</button>
   </form>
 
   <div id="pizza-picture">
 
   </div>
-    <h5>Your total is <span id='price'></span>. Expect your delivery in 17 hours!</h5>
+
+  <div id='cart'>
+
+  </div>
+
   <div id="total">
+    <h5>Your total is <span id='total'></span>. Expect your delivery in 17 hours!</h5>
 
   </div>
 </body>
