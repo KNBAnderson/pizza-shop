@@ -72,8 +72,10 @@ $(function() {
       pizzaOrder.addPizza(pizza);
 
       if (toppings.length === 0) {
-        $('#order').prepend('<p>1 ' + size + ' sized pizza with ' + sauce + ' sauce, and ' + cheese + '</p><p calls="right-align">Price: $' + pizza.price.toFixed(2) + '</p>');
-      }else {
+        $('#order').prepend('<p>1 ' + size + ' sized pizza with ' + sauce + ' sauce and ' + cheese + '</p><p calls="right-align">Price: $' + pizza.price.toFixed(2) + '</p>');
+      }else if (toppings.length === 1) {
+        $('#order').prepend('<p>1 ' + size + ' sized pizza with ' + sauce + ' sauce, ' + cheese + ', and topped with ' + toppings[0] +'</p><p calls="right-align">Price: $' + pizza.price.toFixed(2) + '</p>');
+      } else {
         $('#order').prepend('<div class="custom-pizza"><p>1 ' + size + ' sized pizza with ' + sauce + ' sauce, ' + cheese + ', and topped with ' + pizza.printToppings() + '</p><p calls="right-align">Price: $' + pizza.price.toFixed(2) + '</p></div>');
       }
       $(this)[0].reset();
